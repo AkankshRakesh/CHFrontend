@@ -1,0 +1,23 @@
+[
+    {
+        "CategoryName" : "Web Developement"
+    },
+    {
+        "CategoryName" : "Data Science"
+    },
+    {
+        "CategoryName" : "Machine Learning"
+    },
+    {
+        "CategoryName": "Cybersecurity"
+    },
+    {
+        "CategoryName" : "Blockchain"
+    },
+    {
+        "CategoryName" : "Computer Architecture"
+    },
+    {
+        "CategoryName": "Cloud Computing"
+    }
+]
