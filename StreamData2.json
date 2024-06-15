@@ -1,7 +1,7 @@
 [
     {
         "CategoryName": "Blockchain",
-        "index" : "1",
+        "index": "1",
         "name": "Blockchain Project Manager",
         "pay": "Avg Pay: ₹18 LPA - ₹25 LPA",
         "star1": "true",
@@ -11,11 +11,13 @@
         "star5": "false",
         "img": "https://blockchainstock.blob.core.windows.net/features/F081978E1EB7109A4A2CB0A51AD47FFD0EA312DC885A8BAE37902A9C1BDEB77D.jpg",
         "para": "The Project Manager Blockchain coordinates blockchain processing software issues with other IT organizations including applications and operations.",
-        "skills" : "Hyperledger, Ethereum, Corda, JIRA, Confluence, Git, Scrum, Agile, MS Project"
+        "skills": "Hyperledger, Ethereum, Corda, JIRA, Confluence, Git, Scrum, Agile, MS Project",
+        "pathway": "Understand the basics: Blockchain technology / Project management methodologies / Software development lifecycle, Build a strong foundation: Smart contracts / Decentralized applications (dApps) / Blockchain platforms, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: PMP / Certified Blockchain Professional / Scrum Master Certification, Contribute to open-source projects: Hyperledger / Ethereum / GitHub",
+        "link": "https://101blockchains.com/blockchain-project-manager/"
     },
     {
         "CategoryName": "Blockchain",
-        "index" : "2",
+        "index": "2",
         "name": "Blockchain Quality Engineer",
         "pay": "Avg Pay: ₹10 LPA - ₹16 LPA",
         "star1": "true",
@@ -25,11 +27,13 @@
         "star5": "false",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGNZwPckYZwX94VpyHLr-35qxMgt7UdMQeEw&s",
         "para": "A Blockchain Quality Engineer develops automation frameworks, manual tests, and tests for glitches and bugs. Essentially, the role is all about quality, testing, and automation.",
-        "skills" : "Selenium, Jenkins, Hyperledger, Ethereum, JIRA, Git, Docker"
+        "skills": "Selenium, Jenkins, Hyperledger, Ethereum, JIRA, Git, Docker",
+        "pathway": "Understand the basics: Quality assurance principles / Software testing methodologies / Blockchain fundamentals, Build a strong foundation: Automation frameworks / Test automation tools / Continuous integration/continuous deployment (CI/CD), Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: ISTQB / Certified Blockchain Professional / Selenium Certification, Contribute to open-source projects: Jenkins / Selenium / GitHub",
+        "link": "https://www.spiceworks.com/tech/it-careers-skills/articles/blockchain-engineer/"
     },
     {
         "CategoryName": "Blockchain",
-        "index" : "3",
+        "index": "3",
         "name": "Blockchain Architect",
         "pay": "Avg Pay: ₹20 LPA - ₹35 LPA",
         "star1": "true",
@@ -39,11 +43,13 @@
         "star5": "true",
         "img": "https://i.ibb.co/j8xnxFP/course1-thumbnail-cube-2022.png",
         "para": "At its core, it is a continuously growing list of records, called blocks, linked together using cryptography to form a chain.",
-        "skills" : "Hyperledger, Ethereum, Corda, AWS, Docker, Kubernetes, Solidity, Rust, Java"
+        "skills": "Hyperledger, Ethereum, Corda, AWS, Docker, Kubernetes, Solidity, Rust, Java",
+        "pathway": "Understand the basics: Blockchain architecture / Cryptography / Consensus algorithms, Build a strong foundation: Blockchain platforms / Smart contracts / Decentralized applications (dApps), Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Certified Blockchain Solutions Architect / AWS Certified Blockchain, Contribute to open-source projects: Hyperledger / Ethereum / GitHub",
+        "link": "https://www.linkedin.com/pulse/how-become-blockchain-architect-10-steps-alberto-cuesta-ca%C3%B1ada/"
     },
     {
         "CategoryName": "Data Science",
-        "index" : "4",
+        "index": "4",
         "name": "Data Engineer",
         "pay": "Avg Pay: ₹7 LPA - ₹14 LPA",
         "star1": "true",
@@ -53,11 +59,13 @@
         "star5": "false",
         "img": "https://media.licdn.com/dms/image/D4D12AQGJDTLUwHasJw/article-cover_image-shrink_600_2000/0/1685191084419?e=2147483647&v=beta&t=4ZTHAzDCLzmKLSb-n3LwCU79F3xa9uKYvMcG01HcSGo",
         "para": "Their ultimate goal is to make data accessible so that organisations can use it to evaluate and optimise their performance.",
-        "skills" : "Python, SQL, Hadoop, Spark, Kafka, AWS, Google Cloud, Azure, Airflow"
+        "skills": "Python, SQL, Hadoop, Spark, Kafka, AWS, Google Cloud, Azure, Airflow",
+        "pathway": "Understand the basics: Data engineering principles / Data architecture / ETL processes, Build a strong foundation: Big data technologies / Cloud computing / Database management systems, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Google Cloud Professional Data Engineer / AWS Certified Big Data, Contribute to open-source projects: Apache Hadoop / Apache Spark / GitHub",
+        "link": "https://www.datacamp.com/blog/how-to-become-a-data-engineer"
     },
     {
         "CategoryName": "Data Science",
-        "index" : "5",
+        "index": "5",
         "name": "Database Manager",
         "pay": "Avg Pay: ₹8 LPA - ₹15 LPA",
         "star1": "true",
@@ -67,11 +75,13 @@
         "star5": "true",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RsKKyf7UdBeQRWlkc_y0zVir3V1LUey1F-yrtK_-ew&s",
         "para": "A database manager is responsible for developing and maintaining an organizations' systems that store and organize data for companies.",
-        "skills" : "MySQL, PostgreSQL, Oracle, SQL Server, MongoDB, Cassandra, AWS RDS, Azure SQL Database"
+        "skills": "MySQL, PostgreSQL, Oracle, SQL Server, MongoDB, Cassandra, AWS RDS, Azure SQL Database",
+        "pathway": "Understand the basics: Database management / Data modeling / SQL, Build a strong foundation: Relational databases / NoSQL databases / Cloud databases, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Oracle Certified Professional / AWS Certified Database, Contribute to open-source projects: MySQL / PostgreSQL / GitHub",
+        "link": "https://www.pluralsight.com/resource-center/guides/guide-to-becoming-a-database-admin"
     },
     {
         "CategoryName": "Data Science",
-        "index" : "6",
+        "index": "6",
         "name": "Big Data Engineer",
         "pay": "Avg Pay: ₹10 LPA - ₹18 LPA",
         "star1": "true",
@@ -81,11 +91,13 @@
         "star5": "false",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaMTieTLniNqD-q85FZVdowff2UMbF6t6qdg&s",
         "para": "Responsible for designing, building, testing and maintaining complex data processing systems that work with large data sets.",
-        "skills" : "Hadoop, Spark, Kafka, HBase, Hive, Python, Scala, AWS, Google Cloud"
+        "skills": "Hadoop, Spark, Kafka, HBase, Hive, Python, Scala, AWS, Google Cloud",
+        "pathway": "Understand the basics: Big data principles / Data processing frameworks / Cloud computing, Build a strong foundation: Distributed computing / Real-time data processing / Data pipelines, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Cloudera Certified Data Engineer / AWS Certified Big Data, Contribute to open-source projects: Apache Hadoop / Apache Spark / GitHub",
+        "link": "https://www.coursera.org/articles/big-data-engineer"
     },
     {
         "CategoryName": "Computer Architecture",
-        "index" : "7",
+        "index": "7",
         "name": "Soc Architecture Engineer",
         "pay": "Avg Pay: ₹12 LPA - ₹20 LPA",
         "star1": "true",
@@ -95,11 +107,13 @@
         "star5": "true",
         "img": "https://shorturl.at/5OfeQ",
         "para": "As a System-on-Chip (SoC) design engineer, your role is multifaceted, encompassing the design, development, and integration of complex integrated circuits.",
-        "skills" : "Verilog, VHDL, SystemC, Cadence, Synopsys, ARM, FPGA, Embedded C, Python"
+        "skills": "Verilog, VHDL, SystemC, Cadence, Synopsys, ARM, FPGA, Embedded C, Python",
+        "pathway": "Understand the basics: SoC architecture / Digital design / Hardware description languages, Build a strong foundation: FPGA design / ASIC design / Embedded systems, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Certified System-on-Chip (SoC) Design Engineer / ARM Accredited Engineer, Contribute to open-source projects: OpenCores / GitHub",
+        "link": "https://www.metacareers.com/v2/jobs/222430920627230/"
     },
     {
         "CategoryName": "Web Development",
-        "index" : "8",
+        "index": "8",
         "name": "Front End Developer",
         "pay": "Avg Pay: ₹5 LPA - ₹10 LPA",
         "star1": "true",
@@ -109,11 +123,13 @@
         "star5": "false",
         "img": "https://i0.wp.com/plopdo.com/wp-content/uploads/2021/07/Screenshot-1.png?resize=1210%2C642&ssl=1",
         "para": "Builds the front-end portion of websites and web applications—the part users see and interact with.",
-        "skills" : "HTML, CSS, JavaScript, React, Angular, Vue.js, Bootstrap, Git"
+        "skills": "HTML, CSS, JavaScript, React, Angular, Vue.js, Bootstrap, Git",
+        "pathway": "Understand the basics: HTML / CSS / JavaScript , Learn a modern front-end framework: React / Angular / Vue.js , Master version control with Git , Build projects to showcase your skills , Stay updated with the latest trends and technologies",
+        "link": "https://bootcamp.ce.ucf.edu/blog/front-end-developer-career-path/"
     },
     {
         "CategoryName": "Web Development",
-        "index" : "9",
+        "index": "9",
         "name": "Back End Developer",
         "pay": "Avg Pay: ₹6 LPA - ₹12 LPA",
         "star1": "true",
@@ -123,11 +139,13 @@
         "star5": "false",
         "img": "https://miro.medium.com/v2/resize:fit:1400/1*qgUU5Bsw_aijAPHiaMnCng.png",
         "para": "Build and maintain websites while looking after cross-platform functionality and compatibility.",
-        "skills" : "Node.js, Express, Django, Flask, Ruby on Rails, SQL, MongoDB, Docker, Git"
+        "skills": "Node.js, Express, Django, Flask, Ruby on Rails, SQL, MongoDB, Docker, Git",
+        "pathway": "Understand the fundamentals: Server, Database, and APIs / Learn a back-end programming language: Node.js, Python, Ruby / Master database management: SQL, NoSQL / Gain experience with frameworks: Express, Django, Flask / Develop and deploy applications",
+        "link": "https://codeinstitute.net/global/blog/back-end-developer-career-paths/#:~:text=A%20back%2Dend%20developer%20can%20pursue%20many%20different%20career%20paths,particular%20programming%20language%20or%20framework."
     },
     {
         "CategoryName": "Web Development",
-        "index" : "10",
+        "index": "10",
         "name": "Full Stack Web Developer",
         "pay": "Avg Pay: ₹13 LPA - ₹25 LPA",
         "star1": "true",
@@ -137,11 +155,13 @@
         "star5": "true",
         "img": "https://miro.medium.com/v2/resize:fit:1400/1*qgUU5Bsw_aijAPHiaMnCng.png",
         "para": "Responsible for both front-end and back-end",
-        "skills" : "HTML, CSS, JavaScript, React, Node.js, Python, Django, MySQL, MongoDB, Docker, Git"
+        "skills": "HTML, CSS, JavaScript, React, Node.js, Python, Django, MySQL, MongoDB, Docker, Git",
+        "pathway": "Learn front-end and back-end technologies , Build full-stack projects , Master version control with Git , Gain proficiency in a full-stack framework: MERN / MEAN / Django , Deploy and manage applications in the cloud",
+        "link": "https://www.bestcolleges.com/bootcamps/tracks/full-stack-development/"
     },
     {
         "CategoryName": "Machine Learning",
-        "index" : "11",
+        "index": "11",
         "name": "Machine Learning Engineer",
         "pay": "Avg Pay: ₹8 LPA - ₹20 LPA",
         "star1": "true",
@@ -151,7 +171,9 @@
         "star5": "false",
         "img": "https://www.altexsoft.com/static/blog-post/2023/11/b9923c88-4373-4f5c-99bc-745113074ca5.webp",
         "para": "Responsible for creating programs and algorithms that enable machines to take actions without being explicitly directed. Offers the best prospects for career growth.",
-        "skills" : "Python, TensorFlow, PyTorch, Scikit-learn, Keras, Pandas, NumPy, AWS, Google Cloud"
+        "skills": "Python, TensorFlow, PyTorch, Scikit-learn, Keras, Pandas, NumPy, AWS, Google Cloud",
+        "pathway": "Understand the basics: Machine learning (ML) / Artificial intelligence (AI) / Algorithms / Programming languages like Python and Java is crucial, Build a strong foundation: Deep learning / Neural networks / Natural language processing / Linear algebra / Statistics, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: IBM's Applied AI Professional Certificate / Amazon's Certified Machine Learning Certificate, Contribute to open-source projects: Platforms like Kaggle / GitHub / TensorFlow",
+        "link": "https://www.projectpro.io/article/machine-learning-engineer-career-path/537"
     },
     {
         "CategoryName": "Machine Learning",
@@ -165,11 +187,13 @@
         "star5": "true",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw9UXAsgvv-t3-kbTmOhDTkvu_6Kc_c7rneQ&s",
         "para": "Involved in conducting research to develop new machine learning and deep learning algorithms and applications. Offers the best prospects for career growth.",
-        "skills" : "Python, TensorFlow, PyTorch, Keras, Jupyter, Pandas, NumPy, AWS, Google Cloud"
+        "skills" : "Python, TensorFlow, PyTorch, Keras, Jupyter, Pandas, NumPy, AWS, Google Cloud",
+        "pathway" : "Understand the basics :- Machine learning (ML) / Artificial intelligence (AI) / Algorithms / Programming languages like Python and Java is crucial, Build a strong foundation :- Deep learning / Neural networks / Natural language processing / Linear algebra / Statistics, Develop technical and hands-on skills :- Internships / Collaborative projects / Individual assignments, Earn certifications :- IBM's Applied AI Professional Certificate / Amazon's Certified Machine Learning Certificate, Contribute to open-source projects :- Platforms like Kaggle / GitHub / TensorFlow",
+        "link" : "https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/how-to-become-an-ai-scientist"
     },
     {
         "CategoryName": "Cloud Computing",
-        "index" : "13",
+        "index": "13",
         "name": "Cloud Solutions Architect",
         "pay": "Avg Pay: ₹15 LPA - ₹30 LPA",
         "star1": "true",
@@ -179,11 +203,13 @@
         "star5": "true",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-nknq_Me3v-fLhRq40lgJEpQXm3V4FopXcg&s",
         "para": "Responsible for overseeing a company's cloud computing strategy. Offers the best prospects for career growth.",
-        "skills" : "AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform, Ansible, Jenkins"
+        "skills": "AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform, Ansible, Jenkins",
+        "pathway": "Understand the basics: Cloud computing principles / Networking / Databases, Build a strong foundation: Cloud architecture / Design patterns / Infrastructure as Code (IaC), Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: AWS Certified Solutions Architect / Google Professional Cloud Architect, Contribute to open-source projects: Kubernetes / Terraform / GitHub",
+        "link": "https://www.tryexponent.com/blog/cloud-architect-career-path"
     },
     {
         "CategoryName": "Cloud Computing",
-        "index" : "14",
+        "index": "14",
         "name": "Cloud Engineer",
         "pay": "Avg Pay: ₹12 LPA - ₹25 LPA",
         "star1": "true",
@@ -193,11 +219,13 @@
         "star5": "true",
         "img": "https://miro.medium.com/v2/resize:fit:720/1*2wdt0V3Y5m9XflPLsRHDhQ.png",
         "para": "Designs, develops, and manages cloud-based solutions. Offers the best prospects for career growth.",
-        "skills" : "AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform, Ansible, Jenkins"
+        "skills": "AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform, Ansible, Jenkins",
+        "pathway": "Understand the basics: Cloud computing / Networking / Databases, Build a strong foundation: Cloud platforms (AWS or Azure or Google Cloud) / Infrastructure as Code (IaC), Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: AWS Certified DevOps Engineer / Google Professional Cloud Developer, Contribute to open-source projects: Docker / Kubernetes / GitHub",
+        "link": "https://www.dice.com/career-advice/cloud-engineer-career-path-what-you-need-to-know"
     },
     {
         "CategoryName": "Cloud Computing",
-        "index" : "15",
+        "index": "15",
         "name": "Cloud Security Engineer",
         "pay": "Avg Pay: ₹12 LPA - ₹22 LPA",
         "star1": "true",
@@ -207,11 +235,14 @@
         "star5": "false",
         "img": "https://www.hackthebox.com/storage/blog/A9a9OoU4onbBGUh0d5ONVhtgvkZrm91A.jpg",
         "para": "Specializes in maintaining and securing cloud infrastructure. Offers the best prospects for career growth.",
-        "skills" : "AWS, Azure, Google Cloud, Docker, Kubernetes, Splunk, Palo Alto, Check Point, Nessus"
-    },
+        "skills": "AWS, Azure, Google Cloud, Docker, Kubernetes, Splunk, Palo Alto, Check Point, Nessus",
+        "pathway": "Understand the basics: Cloud computing / Cybersecurity principles / Networking, Build a strong foundation: Cloud security architecture / Compliance / Identity and access management, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: AWS Certified Security Specialty / Google Professional Cloud Security Engineer, Contribute to open-source projects: Security tools / GitHub",
+        "link": "https://medium.com/@goodycyb/practical-steps-to-starting-a-career-in-cloud-security-2024-roadmap-081ebdafa1f4"
+    }
+    ,
     {
         "CategoryName": "Cloud Computing",
-        "index" : "16",
+        "index": "16",
         "name": "Cloud DevOps Engineer",
         "pay": "Avg Pay: ₹14 LPA - ₹28 LPA",
         "star1": "true",
@@ -221,11 +252,13 @@
         "star5": "true",
         "img": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Mastering_The_Future_With_A_Master_Degree_In_Cloud_Computing.jpg",
         "para": "Combines expertise in cloud technologies with DevOps practices. Offers the best prospects for career growth.",
-        "skills" : "AWS, Azure, Google Cloud, Docker, Kubernetes, Jenkins, Terraform, Ansible, Git"
+        "skills": "AWS, Azure, Google Cloud, Docker, Kubernetes, Jenkins, Terraform, Ansible, Git",
+        "pathway": "Understand the basics: Cloud computing / DevOps principles / Networking / Programming, Build a strong foundation: Continuous integration and delivery (CI/CD) / Infrastructure as Code (IaC) / Monitoring and logging, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: AWS Certified DevOps Engineer / Azure DevOps Engineer Expert, Contribute to open-source projects: GitHub / Jenkins / Kubernetes",
+        "link": "https://instatus.com/blog/devops-career-path"
     },
     {
         "CategoryName": "Cloud Computing",
-        "index" : "17",
+        "index": "17",
         "name": "Cloud Administrator",
         "pay": "Avg Pay: ₹10 LPA - ₹20 LPA",
         "star1": "true",
@@ -235,11 +268,13 @@
         "star5": "false",
         "img": "https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5d482257d5a5569eb686a3cd_cloud-systems-administrator.jpg",
         "para": "Responsible for managing and maintaining cloud infrastructure. Offers the best prospects for career growth.",
-        "skills" : "AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform, Ansible, Jenkins"
+        "skills": "AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform, Ansible, Jenkins",
+        "pathway": "Understand the basics: Cloud computing / Networking / Operating systems, Build a strong foundation: Cloud platforms (AWS or Azure or Google Cloud) / Virtualization / Containerization, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: AWS Certified SysOps Administrator / Google Associate Cloud Engineer, Contribute to open-source projects: Terraform / Ansible / GitHub",
+        "link": "https://www.wgu.edu/career-guide/information-technology/cloud-admin-career.html#:~:text=The%20role%20of%20a%20cloud,administrators%20obtain%20a%20master's%20degree."
     },
     {
         "CategoryName": "Cybersecurity",
-        "index" : "18",
+        "index": "18",
         "name": "Security Analyst",
         "pay": "Avg Pay: ₹8 LPA - ₹14 LPA",
         "star1": "true",
@@ -249,11 +284,13 @@
         "star5": "false",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHhciDLX_4_OHzHXELCzJ-1orhUUFF2rUpg&s",
         "para": "Analyzes and responds to security threats and vulnerabilities. Offers average prospects for career growth.",
-        "skills" : "SIEM, IDS/IPS, Firewalls, Wireshark, Nessus, Splunk, Qualys, OSSEC"
+        "skills": "SIEM, IDS/IPS, Firewalls, Wireshark, Nessus, Splunk, Qualys, OSSEC",
+        "pathway": "Understand the basics: Cybersecurity principles / Networking / Operating systems, Build a strong foundation: Threat detection / Incident response / Vulnerability assessment, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: CompTIA Security+ / Certified Information / Systems Security Professional (CISSP), Contribute to open-source projects: OSSEC / Wireshark / GitHub",
+        "link": "https://www.cybersecurityeducation.org/careers/security-analyst/#:~:text=Cyber%20Security%20career%20paths%20and,a%20systems%20analyst%20specialist%20role."
     },
     {
         "CategoryName": "Cybersecurity",
-        "index" : "19",
+        "index": "19",
         "name": "Cybersecurity Engineer",
         "pay": "Avg Pay: ₹10 LPA - ₹18 LPA",
         "star1": "true",
@@ -263,11 +300,13 @@
         "star5": "false",
         "img": "https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5d4ac03d85b81fe40f81ce35_cyber-security-engineer.jpg",
         "para": "Designs and implements security measures to protect an organization's computer systems and networks. Offers the best prospects for career growth.",
-        "skills" : "Firewalls, IDS/IPS, SIEM, Wireshark, Nessus, Metasploit, Splunk, Qualys"
+        "skills": "Firewalls, IDS/IPS, SIEM, Wireshark, Nessus, Metasploit, Splunk, Qualys",
+        "pathway": "Understand the basics: Cybersecurity principles / Networking / Programming, Build a strong foundation: Security architecture / Penetration testing / Incident response, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Certified Information Systems Security Professional (CISSP) / Offensive Security Certified Professional (OSCP), Contribute to open-source projects: Metasploit / Wireshark / GitHub",
+        "link": "https://www.simplilearn.com/tutorials/cyber-security-tutorial/how-to-become-cyber-security-engineer"
     },
     {
         "CategoryName": "Cybersecurity",
-        "index" : "20",
+        "index": "20",
         "name": "Ethical Hacker/Penetration Tester",
         "pay": "Avg Pay: ₹8 LPA - ₹13 LPA",
         "star1": "true",
@@ -277,11 +316,13 @@
         "star5": "false",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5tfzLOLRk_BghDIpwrVFF6kczK4X-NnZNAQ&s",
         "para": "Identifies and exploits vulnerabilities in computer systems to improve security. Offers the best prospects for career growth.",
-        "skills" : "Metasploit, Nmap, Burp Suite, Wireshark, Nessus, Kali Linux, OWASP ZAP"
+        "skills": "Metasploit, Nmap, Burp Suite, Wireshark, Nessus, Kali Linux, OWASP ZAP",
+        "pathway": "Understand the basics: Cybersecurity principles / Networking / Operating systems, Build a strong foundation: Ethical hacking / Vulnerability assessment / Penetration testing methodologies, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Certified Ethical Hacker (CEH) / Offensive Security Certified Professional (OSCP), Contribute to open-source projects: Metasploit / Kali Linux / GitHub",
+        "link": "https://www.coursera.org/in/articles/how-to-become-a-penetration-tester"
     },
     {
         "CategoryName": "Cybersecurity",
-        "index" : "21",
+        "index": "21",
         "name": "Security Consultant",
         "pay": "Avg Pay: ₹10 LPA - ₹18 LPA",
         "star1": "true",
@@ -291,6 +332,8 @@
         "star5": "false",
         "img": "https://media.geeksforgeeks.org/wp-content/uploads/20200918114245/HowtoBecomeaCyberSecurityConsultant.png",
         "para": "Advises organizations on how to improve their security posture. Offers the best prospects for career growth.",
-        "skills" : "SIEM, IDS/IPS, Firewalls, Nessus, Splunk, Wireshark, Metasploit, CISSP, CISM"
+        "skills": "SIEM, IDS/IPS, Firewalls, Nessus, Splunk, Wireshark, Metasploit, CISSP, CISM",
+        "pathway": "Understand the basics: Cybersecurity principles / Networking / Risk management, Build a strong foundation: Security frameworks (NIST or ISO) / Compliance / Incident response, Develop technical and hands-on skills: Internships / Collaborative projects / Individual assignments, Earn certifications: Certified Information Systems Security Professional (CISSP) / Certified Information Security Manager (CISM), Contribute to open-source projects: Security tools / GitHub",
+        "link": "https://www.simplilearn.com/cyber-security-consultant-article"
     }
 ]

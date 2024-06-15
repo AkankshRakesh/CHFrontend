@@ -37,3 +37,10 @@ code {
 .custom-tooltip .arrow::before {
   border-top-color: #343a40;
 }
+.card-container {
+  transition: transform 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+.card-container:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px 5px rgba(93, 217, 255, 0.7); /* Neon green glow effect */
+}

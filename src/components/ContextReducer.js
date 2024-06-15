@@ -6,7 +6,7 @@ const CartDispatchContext = createContext();
 const reducer = (state, action) => {
     switch(action.type){
         case "ADD":
-            return [...state,{id : action.id, name : action.name, skills : action.skills}]
+            return [...state,{id : action.id, name : action.name, skills : action.skills, pathway : action.pathway, link : action.link}]
         
         case "REMOVE":
             let newArr = [...state]

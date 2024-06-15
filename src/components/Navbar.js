@@ -6,21 +6,20 @@ import Cart from '../screens/Cart';
 import { useState } from 'react';
 import { useCart } from './ContextReducer';
 
-export default function Navbar() {
+export default function Navbar({fixedTop}) {
   let data = useCart();
   const navigate = useNavigate();
   const [cartView, setCartView] = useState(false);
-  
   const handleLogout = ()=>{
     localStorage.removeItem("authToken");
     navigate("/login");
   }
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className={`navbar navbar-expand-lg navbar-dark bg-dark ${fixedTop && !cartView ? 'fixed-top' : ''}`}>
   <div className="container-fluid">
-  <Link className="navbar-brand" to="#">
-      <img src="https://imgdb.net/storage/uploads/81189a12e8e2f654bc12df3f9e4421e929e8916882cf0d10355828b72110e8f1.png" alt="" width="90" height="70"/>
+  <Link  to="#">
+      <img className="navbar-brand" src="https://imgdb.net/storage/uploads/81189a12e8e2f654bc12df3f9e4421e929e8916882cf0d10355828b72110e8f1.png" alt="" width="90" height="70"/>
     </Link>
     <Link className="navbar-brand fs-1 fst-italic fst-bold text-success mb-1" to="/" >Career<span className = "text-info">Hunt</span></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +30,11 @@ export default function Navbar() {
         <li className="nav-item">
           <Link className="nav-link active fs-5 mt-3 mb-3" aria-current="page" to="/">Home</Link>
         </li>
+        {(!localStorage.getItem("token")) ?
+          <li className="nav-item">
+              <Link className="nav-link fs-5 mt-3 mb-3 active" aria-current="page" to="/myorder" >My Orders</Link>  
+          </li> : ""
+        }
 
       </ul>
       {(!localStorage.getItem("authToken")) ? 

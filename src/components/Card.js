@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useDispatchCart, useCart } from './ContextReducer';
+import { StarIcon, CheckIcon } from '@chakra-ui/icons';
 
 export default function Card(props) {
   let courseItem = props.courseItems;
@@ -24,7 +25,9 @@ export default function Card(props) {
         type: "ADD",
         id: props.courseItems._id,
         name: props.courseItems.name,
-        skills: props.courseItems.skills
+        skills: props.courseItems.skills,
+        pathway : props.courseItems.pathway,
+        link : props.courseItems.link
       });
       console.log(data);
     }
@@ -44,22 +47,22 @@ export default function Card(props) {
         </div>
       )}
       
-      <div className="card mt-3">
+      <div className="card mt-3 card-container">
         <img src={props.courseItems.img} className="card-img-top rounded" alt="..." style={{height: '180px', objectFit: "fill"}} />
         <div className="card-body">
-        <OverlayTrigger
-            placement="top"
-            overlay={<Tooltip id={`tooltip-${courseItem._id}`} className="custom-tooltip">{props.courseItems.name}</Tooltip>}
-          >
-            <h5 className="card-title text-truncate">{props.courseItems.name}</h5>
+          <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip id={`tooltip-${courseItem._id}`} className="custom-tooltip">{props.courseItems.name}</Tooltip>}
+            >
+              <h5 className="card-title text-truncate">{props.courseItems.name}</h5>
           </OverlayTrigger>
           
           <div className="ratings ml-5">
-            <i className={`fa fa-star rating-color ${props.courseItems.star1 === 'true' ? 'text-warning' : ''}`}></i>
-            <i className={`fa fa-star rating-color ${props.courseItems.star2 === 'true' ? 'text-warning' : ''}`}></i>
-            <i className={`fa fa-star rating-color ${props.courseItems.star3 === 'true' ? 'text-warning' : ''}`}></i>
-            <i className={`fa fa-star rating-color ${props.courseItems.star4 === 'true' ? 'text-warning' : ''}`}></i>
-            <i className={`fa fa-star rating-color ${props.courseItems.star5 === 'true' ? 'text-warning' : ''}`}></i>
+            <StarIcon className={`rating-color ${props.courseItems.star1 === 'true' ? 'text-warning' : ''}`} />
+            <StarIcon className={`rating-color ${props.courseItems.star2 === 'true' ? 'text-warning' : ''}`} />
+            <StarIcon className={`rating-color ${props.courseItems.star3 === 'true' ? 'text-warning' : ''}`} />
+            <StarIcon className={`rating-color ${props.courseItems.star4 === 'true' ? 'text-warning' : ''}`} />
+            <StarIcon className={`rating-color ${props.courseItems.star5 === 'true' ? 'text-warning' : ''}`} />
           </div>
 
           <p className='card-text'>{props.courseItems.pay}</p>
@@ -79,7 +82,9 @@ export default function Card(props) {
             </div>
           </Collapse>
         </div>
-        <button className={`btn btn-success justify-center`} onClick={handleAddToCart}>Add to List</button>
+        <button className={`btn btn-success justify-center`} onClick={handleAddToCart}>
+          Add to List
+        </button>
       </div>
     </div>
   );

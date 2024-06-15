@@ -26,9 +26,8 @@ export default function Home() {
   },[])
   return (
     <div>
-      <div><Navbar /></div>
+      <div><Navbar fixedTop={true}/></div>
       <div><div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{objectFit : "contain !important"}}>
-  
   <div className="carousel-inner" id ="carousel">
   <div className="carousel-caption" style={{zIndex:"10"}}>
   <div className="d-flex justify-content-center">
@@ -37,13 +36,13 @@ export default function Home() {
     </div>
     </div>
     <div className="carousel-item active">
-      <img src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_640.jpg" className="d-block w-100" style={{ filter: "brightness(30%)"}} alt="..."/>
+      <img src="https://www.unrevealedfiles.com/wp-content/uploads/2023/07/Illustration-of-Theory-of-knowledge.webp" className="d-block w-100" style={{ filter: "brightness(30%)"}} alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://c4.wallpaperflare.com/wallpaper/828/823/723/success-career-growth-hd-wallpaper-preview.jpg" className="d-block w-100" style={{ filter: "brightness(30%)"}} alt="..."/>
+      <img src="https://cdn.corporatefinanceinstitute.com/assets/knowledge-economy.jpeg" className="d-block w-100" style={{ filter: "brightness(30%)"}} alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://i.pinimg.com/736x/16/c9/56/16c956c36e419ed13704d7c5e2b647fc.jpg" className="d-block w-100" style={{ filter: "brightness(30%)"}} alt="..."/>
+      <img src="https://s29814.pcdn.co/wp-content/uploads/2022/12/shutterstock_1847661151.jpg.optimal.jpg" className="d-block w-100" style={{ filter: "brightness(30%)"}} alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -55,13 +54,15 @@ export default function Home() {
     <span className="visually-hidden">Next</span>
   </button>
 </div></div>
+      <div className="fs-3 text-success fw-semibold text-center">Choose your most liked course</div>
+      <div className="fst-italic text-center">Stars rating is based on the current market trends</div>
       <div className="container">
         {
           category !== [] 
           ? category.map((data) =>{
             return(
               <div className="row mb-3">
-              <div key={data._id} className="fs-3 m-3">
+              <div key={data._id} className="fs-3 fw-bold m-3">
                 {data.CategoryName}
                 </div>
                 <hr />
