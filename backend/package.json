@@ -5,12 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --env-file=.env server.js",
-  "dev": "nodemon server.js",
-  "build": "npm install",
-  "postinstall": "npm run build"
+    "start": "node --env-file=.env index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "Akanksh Rakesh",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
