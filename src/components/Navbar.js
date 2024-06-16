@@ -32,7 +32,7 @@ export default function Navbar({fixedTop}) {
         </li>
         {(!localStorage.getItem("token")) ?
           <li className="nav-item">
-              <Link className="nav-link fs-5 mt-3 mb-3 active nav-link-hover" aria-current="page" to="/myorder" >My Orders</Link>  
+              <Link className="nav-link fs-5 mt-3 mb-3 active" aria-current="page" to="/myorder" >My Orders</Link>  
           </li> : ""
         }
 
