@@ -13,56 +13,55 @@ const styles = {
   buttonContainer: {
     textAlign: 'center'
   },
-  sds: {
+  containerStyles: {
     zIndex: 1000
   }
 };
 
 export default function Cart() {
-  let data = useCart();
-  let dispatch = useDispatchCart();
-
-  if (data.length === 0) {
-    return (
-      <div>
-        <div className="m-5 w-100 text-center fs-3">The list is empty</div>
-      </div>
-    );
-  }
+  const data = useCart();
+  const dispatch = useDispatchCart();
 
   const handleCheckOut = async () => {
-    let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("http://localhost:5000/api/CareerData", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        career_data: data,
-        email: userEmail,
-        career_date: new Date().toDateString()
-      })
-    });
+    const userEmail = localStorage.getItem("userEmail");
+    try {
+      const response = await fetch("http://localhost:5000/api/CareerData", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          career_data: data,
+          email: userEmail,
+          career_date: new Date().toDateString()
+        })
+      });
 
-    console.log("JSON RESPONSE:::::", response.status);
-    if (response.status === 200) {
-      dispatch({ type: "DROP" });
+      if (response.status === 200) {
+        dispatch({ type: "DROP" });
+      } else {
+        // Handle other response statuses (e.g., display an error message)
+        console.error("Error:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+      // Handle fetch error (e.g., display an error message)
     }
   };
 
   return (
     <div>
-      <div className="container m-auto mt-5" style={styles.sds}>
+      <div className="container m-auto mt-5" style={styles.containerStyles}>
         <div className="table-responsive table-responsive-sm table-responsive-md" style={styles.tableContainer}>
           <table className="table table-hover">
-            <thead className="text-success fs-4">
+            {data.length > 0 ? (<thead className="text-success fs-4">
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Things you should know</th>
                 <th scope="col"></th>
               </tr>
-            </thead>
+            </thead>) : ''}
             <tbody>
               {data.map((career, index) => (
                 <tr key={index}>
@@ -80,9 +79,13 @@ export default function Cart() {
           </table>
         </div>
         <div style={styles.buttonContainer}>
-          <Link className="btn bg-success mt-4" onClick={handleCheckOut} to="/myorder">
-            Click here to know the career path(s)
-          </Link>
+          {data.length > 0 ? (
+            <Link className="btn bg-success mt-4" onClick={handleCheckOut} to="/myorder">
+              Click here to know the career path(s)
+            </Link>
+          ) : (
+            <div className="m-5 w-100 text-center fs-3">The list is empty</div>
+          )}
         </div>
       </div>
     </div>

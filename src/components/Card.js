@@ -1,49 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Collapse, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useDispatchCart, useCart } from './ContextReducer';
-import { StarIcon, CheckIcon } from '@chakra-ui/icons';
+import { StarIcon } from '@chakra-ui/icons';
 
-export default function Card(props) {
-  let courseItem = props.courseItems;
-  let dispatch = useDispatchCart();
-  let data = useCart();
-  const collapseId = `collapse-${props.courseItems.index}`;
+const Card = React.memo((props) => {
+  const courseItem = props.courseItems || {};
+  const dispatch = useDispatchCart();
+  const data = useCart();
+  const collapseId = `collapse-${courseItem.index}`;
   const [open, setOpen] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
 
   const handleAddToCart = async () => {
-    let doIt = true;
-    for (const item of data) {
-      if (item.id === courseItem._id) {
-        setShowAlert(true);
-        doIt = false;
-        break;
-      }
+    if (!localStorage.getItem("authToken")) {
+      setAlertMessage('This feature needs login!');
+      setShowAlert(true);
+      return;
     }
-    if (doIt) {
-      await dispatch({
-        type: "ADD",
-        id: props.courseItems._id,
-        name: props.courseItems.name,
-        skills: props.courseItems.skills,
-        pathway : props.courseItems.pathway,
-        link : props.courseItems.link
-      });
-      console.log(data);
+
+    // Check if the item is already in the cart
+    const alreadyAdded = data.some(item => item.id === props.courseItems._id);
+    if (alreadyAdded) {
+      setAlertMessage('Already Selected!');
+      setShowAlert(true);
+      return;
     }
+
+    await dispatch({
+      type: "ADD",
+      id: props.courseItems._id,
+      name: props.courseItems.name,
+      skills: props.courseItems.skills,
+      pathway: props.courseItems.pathway,
+      link: props.courseItems.link
+    });
+    setAlertMessage('Added to List!');
+    setShowAlert(true);
   };
 
   const handleCloseAlert = () => {
     setShowAlert(false);
   };
 
+  useEffect(() => {
+    if (showAlert) {
+      const timer = setTimeout(() => {
+        setShowAlert(false);
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [showAlert]);
+
   return (
     <div>
+      <style>
+        {`
+          .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+          }
+          .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+          }
+        `}
+      </style>
       {showAlert && (
-        <div className="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Already Selected!</strong>
-          <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseAlert}>
-          </button>
+        <div className={`alert alert-success alert-dismissible ${showAlert ? 'fade-in' : 'fade-out'}`} role="alert">
+          {alertMessage}
+          <button type="button" className="btn-close" aria-label="Close" onClick={handleCloseAlert}></button>
         </div>
       )}
       
@@ -88,4 +114,6 @@ export default function Card(props) {
       </div>
     </div>
   );
-}
+});
+
+export default Card;

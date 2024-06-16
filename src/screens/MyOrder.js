@@ -1,34 +1,51 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PathwayModal from '../Modal2'; // Import the modal component
 
 export default function MyOrder() {
     const [orderData, setOrderData] = useState({});
+    const [loading, setLoading] = useState(true);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [pathwayData, setPathwayData] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        // Check if the page has already been reloaded
-        if (!sessionStorage.getItem('reloaded')) {
-            sessionStorage.setItem('reloaded', 'true');
-            window.location.reload();
-        }
-    }, []);
+        const checkAuth = () => {
+            const authToken = localStorage.getItem('authToken');
+            if (!authToken) {
+                alert("Please log in to view your orders.");
+                navigate('/login'); // Redirect to login page
+            }
+        };
+
+        checkAuth();
+    }, [navigate]);
 
     const fetchMyOrder = async () => {
-        await fetch("http://localhost:5000/api/myOrderData", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: localStorage.getItem('userEmail')
-            })
-        }).then(async (res) => {
-            let response = await res.json();
-            setOrderData(response);
-        });
+        try {
+            const response = await fetch("http://localhost:5000/api/myOrderData", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: localStorage.getItem('userEmail')
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch order data');
+            }
+
+            const data = await response.json();
+            setOrderData(data);
+        } catch (error) {
+            console.error('Error fetching order data:', error);
+        } finally {
+            setLoading(false);
+        }
     };
 
     useEffect(() => {
@@ -42,10 +59,12 @@ export default function MyOrder() {
 
     return (
         <div>
-            <div><Navbar fixedTop={false}/></div>
+            <Navbar fixedTop={false} />
             <div className='container'>
-                {Object.keys(orderData).length !== 0 ?
-                    orderData.careerData ?
+                {loading ? (
+                    <div className="text-center mt-5"><h4>Loading...</h4></div>
+                ) : (
+                    Object.keys(orderData).length !== 0 && orderData.careerData ? (
                         orderData.careerData.career_data.slice(0).reverse().map((item, index) => (
                             <div key={index}>
                                 {item.some(arrayData => arrayData.Career_date) && (
@@ -56,7 +75,7 @@ export default function MyOrder() {
                                 )}
                                 <div className="row">
                                     {item.map((arrayData, idx) => (
-                                        arrayData.Career_date ? null : (
+                                        !arrayData.Career_date && (
                                             <div key={idx} className='col-12 col-md-6 col-lg-3'>
                                                 <div className="card card-container mt-3" style={{ width: "100%", maxHeight: "360px" }} onClick={() => handleCardClick(arrayData)}>
                                                     <div className="card-body">
@@ -72,8 +91,11 @@ export default function MyOrder() {
                                     ))}
                                 </div>
                             </div>
-                        )) : <div className="text-center mt-5"><h4>No orders found</h4></div>
-                    : <div className="text-center mt-5"><h4>Loading...</h4></div>}
+                        ))
+                    ) : (
+                        <div className="text-center mt-5"><h4>No orders found</h4></div>
+                    )
+                )}
             </div>
             <Footer />
             <PathwayModal

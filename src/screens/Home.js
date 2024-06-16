@@ -1,33 +1,55 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 
 export default function Home() {
-  const [search, setSearch ] = useState('');
-  const [category, setCategory ] = useState([]);
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState([]);
   const [stream, setStream] = useState([]);
+  const [loading, setLoading] = useState(true); // Added loading state
+  const [error, setError] = useState(false); // Added error state
 
-  const loadData = async ()=>{
-    let response = await fetch("http://localhost:5000/api/streamData",{
-      method : "POST",
-      headers: {
-        "Content-Type" : "application/json"
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        let response = await fetch("http://localhost:5000/api/streamData", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+
+        if (response.ok) {
+          response = await response.json();
+          setCategory(response[1]);
+          setStream(response[0]);
+        } else {
+          setError(true); // Set error state if fetch fails
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError(true); // Set error state if fetch throws an error
+      } finally {
+        setLoading(false); // Always set loading to false after fetch
       }
-    });
-  
-    response = await response.json();
-    setCategory(response[1]);
-    setStream(response[0]);
+    };
+
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>; // Return loading indicator while fetching data
   }
 
-  useEffect(() =>{
-    loadData()
-  },[])
+  if (error) {
+    return <div>Error fetching data. Please try again later.</div>; // Return error message if fetch fails
+  }
+
   return (
     <div>
-      <div><Navbar fixedTop={true}/></div>
-      <div><div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{objectFit : "contain !important"}}>
+      <Navbar fixedTop={true} />
+      <div><div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: "contain !important" }}>
   <div className="carousel-inner" id ="carousel">
   <div className="carousel-caption" style={{zIndex:"10"}}>
   <div className="d-flex justify-content-center">
@@ -57,35 +79,23 @@ export default function Home() {
       <div className="fs-3 text-success fw-semibold text-center">Choose your most liked course</div>
       <div className="fst-italic text-center">Stars rating is based on the current market trends</div>
       <div className="container">
-        {
-          category !== [] 
-          ? category.map((data) =>{
-            return(
-              <div className="row mb-3">
-              <div key={data._id} className="fs-3 fw-bold m-3">
-                {data.CategoryName}
+        {category.length > 0 ? (
+          category.map((data) => (
+            <div className="row mb-3" key={data._id}>
+              <div className="fs-3 fw-bold m-3">{data.CategoryName}</div>
+              <hr />
+              {stream.filter((streamItem) => streamItem.CategoryName === data.CategoryName && streamItem.name.toLowerCase().includes(search.toLowerCase())).map(filterItems => (
+                <div key={filterItems._id} className="col-s-12 col-md-6 col-lg-3 col-lg-gutters">
+                  <Card courseItems={filterItems} />
                 </div>
-                <hr />
-                {stream !== [] ? stream.filter((stream) => (stream.CategoryName === data.CategoryName) && (stream.name.toLowerCase().includes(search.toLocaleLowerCase()))).map(filterItems =>{
-                  return (
-                    <div key = {filterItems._id} className="col-s-12 col-md-6 col-lg-3 col-lg-gutters"> 
-                        <Card courseItems = {filterItems}
-                        >
-                        </Card>
-                    </div>
-                  )
-                }
-              ): <div> No such data </div>
-          }
+              ))}
             </div>
-            )
-          }) : <div>Error 404</div>
-
-        }
-        
-        
-        </div>
-      <div><Footer /></div>
+          ))
+        ) : (
+          <div>Error 404</div>
+        )}
+      </div>
+      <Footer />
     </div>
   );
 }
