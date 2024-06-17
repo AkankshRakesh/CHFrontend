@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
-
+const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 export default function Login() {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/loginuser', {
+      const response = await fetch(`${apiUrl}/api/loginuser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

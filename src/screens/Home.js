@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-
+const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 export default function Home() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState([]);
   const [stream, setStream] = useState([]);
   const [loading, setLoading] = useState(true); // Added loading state
   const [error, setError] = useState(false); // Added error state
-
+  
   useEffect(() => {
     const loadData = async () => {
       try {
-        let response = await fetch("http://localhost:5000/api/streamData", {
+        let response = await fetch(`${apiUrl}/api/streamData`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

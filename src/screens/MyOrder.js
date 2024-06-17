@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PathwayModal from '../Modal2'; // Import the modal component
-
+const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 export default function MyOrder() {
     const [orderData, setOrderData] = useState({});
     const [loading, setLoading] = useState(true);
@@ -25,7 +25,7 @@ export default function MyOrder() {
 
     const fetchMyOrder = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/myOrderData", {
+            const response = await fetch(`${apiUrl}/api/myOrderData`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

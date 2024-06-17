@@ -2,7 +2,7 @@ import React from "react";
 import { useCart, useDispatchCart } from "../components/ContextReducer";
 import { Link } from "react-router-dom";
 import { DeleteIcon } from "@chakra-ui/icons";
-
+const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 // Define the styles
 const styles = {
   tableContainer: {
@@ -25,7 +25,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     const userEmail = localStorage.getItem("userEmail");
     try {
-      const response = await fetch("http://localhost:5000/api/CareerData", {
+      const response = await fetch(`${apiUrl}/api/CareerData`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

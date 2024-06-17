@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import Footer from '../components/Footer';
-
+const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 export default function Signup() {
     const [credentials, setCredentials] = useState({name: "", email: "", password: "", geolocation: ""});
     const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser", {
+        const response = await fetch(`${apiUrl}/api/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
