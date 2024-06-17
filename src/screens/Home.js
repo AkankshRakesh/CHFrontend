@@ -9,7 +9,6 @@ export default function Home() {
   const [stream, setStream] = useState([]);
   const [loading, setLoading] = useState(true); // Added loading state
   const [error, setError] = useState(false); // Added error state
-  
   useEffect(() => {
     const loadData = async () => {
       try {

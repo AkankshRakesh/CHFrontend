@@ -5,7 +5,6 @@ const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 export default function Login() {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

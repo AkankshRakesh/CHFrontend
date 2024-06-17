@@ -10,7 +10,6 @@ export default function MyOrder() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [pathwayData, setPathwayData] = useState(null);
     const navigate = useNavigate();
-
     useEffect(() => {
         const checkAuth = () => {
             const authToken = localStorage.getItem('authToken');

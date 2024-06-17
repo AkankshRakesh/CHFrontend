@@ -17,7 +17,6 @@ const styles = {
     zIndex: 1000
   }
 };
-
 export default function Cart() {
   const data = useCart();
   const dispatch = useDispatchCart();
