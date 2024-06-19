@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Login from './screens/Login';
@@ -11,10 +11,20 @@ import 'bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  // Fetching message from backend on mount
+  useEffect(() => {
+    fetch("http://localhost:3000")  // Change the port to 4000 as per your requirement
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  }, []);
+
   return (
     <CartProvider>
       <Router>
         <div>
+          <h1>{message}</h1>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/cart" element={<Cart />} />
