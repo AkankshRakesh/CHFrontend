@@ -12,8 +12,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   const [message, setMessage] = useState("");
-
-  // Fetching message from backend on mount
   useEffect(() => {
     fetch("http://localhost:3000")  // Change the port to 4000 as per your requirement
       .then((res) => res.json())
