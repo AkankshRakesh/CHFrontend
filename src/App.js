@@ -9,12 +9,12 @@ import MyOrder from './screens/MyOrder';
 import { CartProvider } from './components/ContextReducer';
 import 'bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+const apiUrl = "https://chbackend-o4ne.onrender.com" || "http://localhost:3000";
 function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000") 
+    fetch(apiUrl) 
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
