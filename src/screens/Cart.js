@@ -2,7 +2,7 @@ import React from "react";
 import { useCart, useDispatchCart } from "../components/ContextReducer";
 import { Link } from "react-router-dom";
 import { DeleteIcon } from "@chakra-ui/icons";
-const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+const apiUrl = "https://chbackend-o4ne.onrender.com" || 'http://localhost:5000';
 // Define the styles
 const styles = {
   tableContainer: {

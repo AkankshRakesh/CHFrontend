@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+const apiUrl = "https://chbackend-o4ne.onrender.com" || 'http://localhost:5000';
 export default function Home() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState([]);

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PathwayModal from '../Modal2'; // Import the modal component
-const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+const apiUrl = "https://chbackend-o4ne.onrender.com" || 'http://localhost:5000';
 export default function MyOrder() {
     const [orderData, setOrderData] = useState({});
     const [loading, setLoading] = useState(true);
