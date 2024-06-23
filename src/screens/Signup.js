@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import Footer from '../components/Footer';
-const apiUrl = "https://chbackend-o4ne.onrender.com" || 'http://localhost:5000';
+const apiUrl = "https://chbackend-o4ne.onrender.com";
 export default function Signup() {
     const [credentials, setCredentials] = useState({name: "", email: "", password: "", geolocation: ""});
     const navigate = useNavigate();

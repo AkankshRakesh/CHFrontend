@@ -6,10 +6,11 @@ import Login from './screens/Login';
 import Signup from './screens/Signup';
 import Cart from './screens/Cart';
 import MyOrder from './screens/MyOrder';
+import About from './screens/About';
 import { CartProvider } from './components/ContextReducer';
 import 'bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-const apiUrl = "https://chbackend-o4ne.onrender.com" || "http://localhost:3000";
+const apiUrl = "https://chbackend-o4ne.onrender.com";
 function App() {
   const [message, setMessage] = useState("");
 
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/createuser" element={<Signup />} />
             <Route exact path="/myOrder" element={<MyOrder />} />
+            <Route exact path="/about" element={<About />}/>
           </Routes>
         </div>
       </Router>
