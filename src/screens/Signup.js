@@ -5,7 +5,6 @@ const apiUrl = "https://chbackend-o4ne.onrender.com";
 export default function Signup() {
     const [credentials, setCredentials] = useState({name: "", email: "", password: "", geolocation: ""});
     const navigate = useNavigate();
-
     const handleSubmit = async(e) => {
         e.preventDefault();
         const response = await fetch(`${apiUrl}/api/createuser`, {

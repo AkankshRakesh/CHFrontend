@@ -35,7 +35,8 @@ const styles = {
 export default function About() {
   return (
     <div style={styles.aboutContainer}>
-      <div style={styles.card}>
+      <div style={styles.card}> 
+        
         <section style={styles.section}>
           <h1 style={styles.heading} className='text-success'>About Me</h1>
           <p>Hii there! The developer and designer of this website is me, Akanksh Rakesh, thank you for checking out my site. To continue surfing the website, <a style={styles.link} href="/">Click here.</a></p>

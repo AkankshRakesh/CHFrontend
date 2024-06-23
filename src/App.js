@@ -13,7 +13,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const apiUrl = "https://chbackend-o4ne.onrender.com";
 function App() {
   const [message, setMessage] = useState("");
-
   
   useEffect(() => {
     fetch(apiUrl) 
