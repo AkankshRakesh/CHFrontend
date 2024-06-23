@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 const apiUrl = "https://chbackend-o4ne.onrender.com";
 
+
 export default function Home() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState([]);

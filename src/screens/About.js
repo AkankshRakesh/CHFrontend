@@ -34,6 +34,7 @@ const styles = {
 
 export default function About() {
   return (
+    
     <div style={styles.aboutContainer}>
       <div style={styles.card}> 
         <section style={styles.section}>
